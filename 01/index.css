@@ -1,0 +1,245 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+/*
+box-sizing : 박스의 크기를 어떤 것을 기준으로 계산할지를 정하는 속성
+- content-box : 콘텐츠 영역을 기준으로 크기를 정함(default)
+- border-box : 테두리를 기준으로 크기를 정함
+- initial : 기본값
+- inherit : 부모 요소의 속성값을 상속받음
+link : https://www.codingfactory.net/10630
+list-style : https://developer.mozilla.org/en-US/docs/Web/CSS/list-style
+*/
+
+body {
+  background: #002b36;
+  font-family: sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/*
+text-decoration : 선으로 텍스트를 꾸밀 수 있게 해주는 속성
+- none : 선 x(default)
+- underline : 글자 아래 선을 만듬
+- inherit : 부모 요소의 속성을 상속받는다
+link : https://www.codingfactory.net/10648
+*/
+
+header {
+  color: #7d99a3;
+  text-align: center;
+  padding: 50px;
+}
+
+header h1 {
+  font-style: italic;
+  font-weight: bold;
+  padding: 50px;
+}
+
+header p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  max-width: 1280px;
+  margin: auto;
+  padding: 50px;
+  color: #faebd7;
+}
+/*
+auto : 가로 중앙에 배치(균등하게 여백 분배)
+link : https://hansolcha.tistory.com/4
+*/
+
+.content .top-news-section {
+  flex-basis: 75%;
+  padding: 10px;
+}
+/*
+flex-basis : Flex Item의 공간 배분 전 기본 너비 설정
+link : https://heropy.blog/2018/11/24/css-flexible-box/
+*/
+
+.content .top-news-section h2 {
+  color: #efbb35;
+  font-size: 36px;
+}
+
+.content aside {
+  flex-basis: 25%;
+  margin: 10px;
+  padding: 20px;
+  border-left: 1px solid #5a6268;
+}
+
+.latest-section .latest-news-list {
+  margin-top: 10px;
+}
+
+.latest-section .latest-news-item {
+  padding: 10px 0;
+  border-bottom: 1px dotted #5a6268;
+}
+
+.latest-section .latest-news-item:hover {
+  color: #add8e6;
+}
+
+.support-section {
+  margin-top: 20px;
+}
+
+.github-support {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.github-support a {
+  line-height: 33px;
+  padding: 7px 12px;
+  background-color: #30363d;
+  border: 1px solid #5a5268;
+  border-radius: 3px;
+  cursor: pointer;
+}
+/*
+line-height : 줄 높이를 정하는 속성이다
+cursor : 해당 태그 위에 위치하는 마우스 커서의 모양을 바꿀 수 있다
+link : https://www.codingfactory.net/10639
+link : https://ofcourse.kr/css-course/cursor-%EC%86%8D%EC%84%B1
+*/
+
+.github-support a:hover {
+  border-color: #8b949e;
+}
+
+.github-support .heart {
+  vertical-align: text-top;
+  color: #ea4aaa;
+  fill: currentColor;
+}
+/*
+vertical-align : 인라인 블록 등을 포함한 모든 인라인요소의 수직 정렬을 위해 사용된다
+- text-top : 요소의 맨 위를 부모 font의 맨 위에 맞춤
+fill : 모양과 텍스트의 경우 요소를 칠하는 데 사용되는 색상을 정의하는 표현 속성이다.
+link : https://aboooks.tistory.com/171
+link : https://runebook.dev/ko/docs/svg/attribute/fill
+*/
+
+.news {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #5a6268;
+  min-height: 200px;
+  padding: 20px 10px;
+}
+/*
+align-items : 교차 축에 대해 item을 어떻게 배치할지 결정
+justify-content : 주축의 item을 어떻게 배치할지 결정
+- space-between : 첫번째 아이템은 main-start, 마지막 아이템은 main-end로 둔 뒤 여백을 공평하게 분배한다
+*/
+
+.information .title {
+  font-size: 25px;
+}
+
+.information .title:hover {
+  color: #add8e6;
+}
+
+.information .description {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.thumbnail-area {
+  max-width: 140px;
+}
+
+.thumbnail-area .thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+/*
+width: auto, height: auto : 내용물의 크기에 맞춰 자동 크기를 조절해 주는 것이다
+link : https://oursmalljoy.com/css-width-auto-height-auto-%EA%B8%B0%EB%B3%B8%EA%B0%9C%EB%85%90-%EC%9E%98%EB%AA%BB-%EC%83%9D%EA%B0%81%ED%95%98%EA%B3%A0-%EC%9E%88%EB%8A%94-%EA%B2%83%EB%93%A4/
+블럭 요소 vs 인라인 요소 vs 인라인 블록 요소 : https://velog.io/@mong-byte/TIL-5%EC%9D%BC%EC%B0%A8-Inline-block
+*/
+
+footer {
+  text-align: center;
+  padding-bottom: 50px;
+  color: #faebd7;
+}
+/*
+text-align : 텍스트의 정렬 방향을 의미한다
+*/
+
+.spinner-area {
+  display: flex;
+  min-height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-area img {
+  width: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+  .content aside {
+    margin: 0;
+    border-left: none;
+    border-bottom: 1px solid #5a6268;
+  }
+  .thumbnail-area {
+    display: none;
+  }
+}
+/*
+screen : 주로 화면 대상
+only : 미디어쿼리를 지원하지 않는 구형 브라우저가 주어진 스타일을 적용하지 못하게 한다
+link : https://developer.mozilla.org/ko/docs/Web/CSS/Media_Queries/Using_media_queries
+*/
+
+@media only screen and (max-width: 375px) {
+  header {
+    padding-bottom: 20px;
+  }
+  header h1 {
+    font-size: 24px;
+  }
+  header p {
+    font-size: 20px;
+  }
+  .content {
+    padding: 10px;
+    font-size: 13px;
+  }
+  .content .top-news-section h2 {
+    font-size: 20px;
+  }
+  .news {
+    min-height: 150px;
+  }
+  .information .title {
+    font-size: 16px;
+  }
+  .information .description {
+    font-size: 13px;
+  }
+}

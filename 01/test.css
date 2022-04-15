@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background: #bdbdbd;
+  font-family: sans-serif;
+}
+/*
+background vs background-color : https://jobcoding.tistory.com/47
+*/
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  background-color: #424242;
+  color: #ffffff;
+  padding: 3.125rem;
+}
+/*
+절대 상대 단위 : https://soharu.tistory.com/17
+*/
+
+header h1 {
+  text-align: center;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.content {
+  display: flex;
+  max-width: 80rem;
+  margin: auto;
+  padding: 1.5625rem;
+}
+
+.content .loadmap-section {
+  flex-basis: 75%;
+}
+
+.content .loadmap-section h2 {
+  font-size: 2.25rem;
+  padding: 1rem 0;
+}
+
+.stack {
+  display: flex;
+  align-items: center;
+  min-height: 7rem;
+  padding: 0.938rem 0.625rem;
+  background-color: #ffffff;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+
+.information .stack-name {
+  font-size: 1.563rem;
+}
+
+.information .url {
+  margin-top: 1rem;
+  text-decoration: underline;
+}
+
+.spinner-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 25rem;
+}
+
+.spinner-area img {
+  width: 50px;
+}
+
+.content aside {
+  flex-basis: 25%;
+}
+
+footer {
+  padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+}

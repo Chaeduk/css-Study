@@ -1,0 +1,44 @@
+{
+  "stacks": [
+    {
+      "title": "Frontend",
+      "url": "https://roadmap.sh/frontend"
+    },
+    {
+      "title": "Backend",
+      "url": "https://roadmap.sh/backend"
+    },
+    {
+      "title": "DevOps",
+      "url": "https://roadmap.sh/devops"
+    },
+    {
+      "title": "React",
+      "url": "https://roadmap.sh/react"
+    },
+    {
+      "title": "Angular",
+      "url": "https://roadmap.sh/angular"
+    },
+    {
+      "title": "Android",
+      "url": "https://roadmap.sh/android"
+    },
+    {
+      "title": "Python",
+      "url": "https://roadmap.sh/python"
+    },
+    {
+      "title": "Go",
+      "url": "https://roadmap.sh/golang"
+    },
+    {
+      "title": "Java",
+      "url": "https://roadmap.sh/java"
+    },
+    {
+      "title": "DBA",
+      "url": "https://roadmap.sh/dba"
+    }
+  ]
+}
