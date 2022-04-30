@@ -1,0 +1,33 @@
+{
+  "name": "study",
+  "version": "1.0.0",
+  "description": "Study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "commit": "npx cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chaeduk/css-Study.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chaeduk/css-Study/issues"
+  },
+  "homepage": "https://github.com/Chaeduk/css-Study#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.4",
+    "commitizen": "^4.2.4",
+    "commitlint-config-gitmoji": "^2.2.5",
+    "cz-customizable": "^6.3.0",
+    "husky": "^7.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
+  }
+}
