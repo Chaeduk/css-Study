@@ -1,0 +1,64 @@
+@import "./root.css";
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--gray-500);
+}
+/*
+:root의 변수 이용
+*/
+
+#app {
+  max-width: 600px;
+  margin: 56px auto 0;
+  padding: 32px 16px;
+  border: 1px solid var(--gray-700);
+  border-radius: 4px;
+  background-color: white;
+}
+/*
+margin : 위, 아래, 좌우
+padding : 위아래, 좌우
+*/
+
+#racing-screen {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.car-lane {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.car-name {
+  padding: 10px 30px 7px;
+  border-radius: 4px;
+  outline: 0;
+  border-style: none;
+  background-color: var(--gray-600);
+  display: inline-flex;
+  font-weight: 400;
+  position: relative;
+}
+/*
+outline : 외곽선 속성 지정
+*/
+
+.distance {
+  padding: 8px 0;
+}
+
+.forward-icon {
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+[hidden] {
+  display: none !important;
+}
+/*
+속성 선택자
+*/
