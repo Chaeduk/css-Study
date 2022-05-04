@@ -15,7 +15,7 @@ export const validateCarNames = (carNames) => {
     return ValidationResult(true, ERROR_MESSAGES.EMPTY_CAR_NAME);
   }
   const carNameList = carNames.split(",").map((carName) => carName.trim());
-  for (let i = 0; i < carList.length; i++) {
+  for (let i = 0; i < carNameList.length; i++) {
     const carName = carNameList[i];
     if (carName.length < MIN_CAR_NAME_LENGTH) {
       return new ValidationResult(
@@ -30,7 +30,8 @@ export const validateCarNames = (carNames) => {
       );
     }
   }
-  const isDuplicated = new Set(carNameList).isze !== carNameList.length;
+
+  const isDuplicated = new Set(carNameList).size !== carNameList.length;
   if (isDuplicated) {
     return new ValidationResult(true, ERROR_MESSAGES.DUPLICATED_CAR_NAME);
   }

@@ -2,7 +2,7 @@ export const SELECTORS = {
   RACING_GAME_PREPARE_FORM: "#racing-game-prepare-form",
   CAR_NAMES_FIELDSET: "#car-names-fieldset",
   CAR_NAMES_INPUT: "#car-names-input",
-  CAR_NAME_SUBMIT_BUTTON: "#car-names-submit-button",
+  CAR_NAMES_SUBMIT_BUTTON: "#car-names-submit-button",
   RACING_COUNT_FIELDSET: "#racing-count-fieldset",
   RACING_COUNT_INPUT: "#racing-count-input",
   RACING_COUNT_SUBMIT_BUTTON: "#racing-count-submit-button",
@@ -38,4 +38,4 @@ export const ERROR_MESSAGES = {
 
 export const CELEBRATE_MESSAGE = "🎉🎉 축하합니다 🎉🎉";
 export const VALIDATION_ERROR_NAME = "ValidationError";
-export const SUBMITTED_CALASS_NAME = "submitted";
+export const SUBMITTED_CLASS_NAME = "submitted";
