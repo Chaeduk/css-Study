@@ -13,7 +13,6 @@ import RacingScreen from "../views/racing-screen.view.js";
 class RacingCarGameController {
   constructor(model) {
     this.model = model;
-    this.init();
   }
 
   init() {
