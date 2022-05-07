@@ -1,11 +1,11 @@
-@import "./normalize.css";
-@import "./root.css";
-@import "./flex.css";
-@import "./typhography.css";
-@import "./spacing.css";
-@import "./btn.css";
-@import "./spinner.css";
-@import "./form.css";
+@import './normalize.css';
+@import './root.css';
+@import './flex.css';
+@import './typhography.css';
+@import './spacing.css';
+@import './btn.css';
+@import './spinner.css';
+@import './form.css';
 
 body {
   width: 100%;

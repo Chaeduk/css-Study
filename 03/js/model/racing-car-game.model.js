@@ -1,10 +1,7 @@
-import {
-  validateCarNames,
-  validateRacingCount,
-} from "../validation/validators.js";
-import ValidationError from "../validation/validation-error.js";
-import CarModel from "./car.model.js";
-import { ERROR_MESSAGES } from "../constants.js";
+import { validateCarNames, validateRacingCount } from '../validation/validators.js';
+import ValidationError from '../validation/validation-error.js';
+import CarModel from './car.model.js';
+import { ERROR_MESSAGES } from '../constants.js';
 
 class RacingCarGameModel {
   constructor() {
@@ -19,7 +16,7 @@ class RacingCarGameModel {
   getCarNames() {
     return this.cars
       .map((car) => car.name)
-      .join(", ")
+      .join(', ')
       .trim();
   }
 
@@ -32,9 +29,7 @@ class RacingCarGameModel {
     if (hasError) {
       throw new ValidationError(errorMessage);
     }
-    this.cars = carNames
-      .split(",")
-      .map((carName) => new CarModel(carName.trim()));
+    this.cars = carNames.split(',').map((carName) => new CarModel(carName.trim()));
   }
 
   updateRacingCount(racingCount) {

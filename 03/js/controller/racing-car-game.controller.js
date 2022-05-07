@@ -3,12 +3,12 @@ import {
   CELEBRATE_MESSAGE,
   CELEBRATE_MESSAGE_SHOW_DELAY,
   VALIDATION_ERROR_NAME,
-} from "../constants.js";
-import consoleErrorWithConditionalAlert from "../utils/timer.js";
-import setIntervalX from "../utils/timer.js";
-import RacingPrepareForm from "../views/racing-prepare-form.view.js";
-import RacingResultView from "../views/racing-result.view.js";
-import RacingScreen from "../views/racing-screen.view.js";
+} from '../constants.js';
+import consoleErrorWithConditionalAlert from '../utils/console.js';
+import setIntervalX from '../utils/timer.js';
+import RacingPrepareForm from '../views/racing-prepare-form.view.js';
+import RacingResultView from '../views/racing-result.view.js';
+import RacingScreen from '../views/racing-screen.view.js';
 
 class RacingCarGameController {
   constructor(model) {
@@ -43,7 +43,7 @@ class RacingCarGameController {
       consoleErrorWithConditionalAlert(e, VALIDATION_ERROR_NAME);
     }
   }
-  
+
   onRacingCountSubmit() {
     const racingCount = this.form.getRacingCount();
     try {
@@ -59,7 +59,7 @@ class RacingCarGameController {
   onRestartBtnClick() {
     this.restartGame();
   }
-  
+
   startGame() {
     this.form.disableSubmit();
     this.screen.show();
@@ -76,7 +76,7 @@ class RacingCarGameController {
     const end = () => {
       this.endGame();
     };
-    
+
     const cars = this.model.getCars();
     const racingCount = this.model.getRacingCount();
     cars.forEach((car, i) => {

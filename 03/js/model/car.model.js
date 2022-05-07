@@ -1,5 +1,5 @@
-import { MIN_CONDITION_OF_CAR_MOVE, RANDOM_RANGE } from "../constants.js";
-import randomNumber from "../utils/random-number.js";
+import { MIN_CONDITION_OF_CAR_MOVE, RANDOM_RANGE } from '../constants.js';
+import randomNumber from '../utils/random-number.js';
 
 class CarModel {
   constructor(name) {

@@ -1,59 +1,53 @@
-import { $ } from "./utils/dom.js";
-import {
-  SELECTORS,
-  OPERATOR,
-  INITIAL_NUMBER,
-  MAX_DIGIT,
-  ERROR_MESSAGES,
-} from "./constants.js";
+import $ from './utils/dom.js';
+import { SELECTORS, OPERATOR, INITIAL_NUMBER, MAX_DIGIT, ERROR_MESSAGES } from './constants.js';
 
 class Calculator {
   constructor() {
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener('DOMContentLoaded', () => {
       this.addEventListeners();
       this.initState();
     });
   }
 
   addEventListeners() {
-    $(SELECTORS.digits).addEventListener("click", (e) => {
+    $(SELECTORS.digits).addEventListener('click', (e) => {
       if (this.calculatedResult !== 0) {
         this.reset();
       }
 
-      const digit = e.target.innerText
+      const digit = e.target.innerText;
       if (!this.currentOperation && this.isOverMaxDigitSize(this.firstNumber)) {
-        alert(ERROR_MESSAGES.underMaxDigitSize)
+        alert(ERROR_MESSAGES.underMaxDigitSize);
         return;
       }
 
-      if(!this.currentOperation){
-        this.firstNumber = Number(this.firstNumber + digit)
-        this.renderTotal(this.firstNumber)
+      if (!this.currentOperation) {
+        this.firstNumber = Number(this.firstNumber + digit);
+        this.renderTotal(this.firstNumber);
         return;
       }
 
-      if(this.isOverMaxDigitSize(this.secondNumber)){
-        alert(ERROR_MESSAGES.underMaxDigitSize)
+      if (this.isOverMaxDigitSize(this.secondNumber)) {
+        alert(ERROR_MESSAGES.underMaxDigitSize);
         return;
       }
 
-      this.secondNumber = Number(this.secondNumber + digit)
-      this.renderTotal(this.secondNumber)
+      this.secondNumber = Number(this.secondNumber + digit);
+      this.renderTotal(this.secondNumber);
     });
 
-    $(SELECTORS.operations).addEventListener('click', (e)=>{
-      const operator = e.target.innerText
-      if(operator === OPERATOR.EQUAL){
-        this.renderTotal(this.calculate(this.firstNumber, this.secondNumber, this.currentOperation))
-      } else{
-        this.currentOperation = operator
+    $(SELECTORS.operations).addEventListener('click', (e) => {
+      const operator = e.target.innerText;
+      if (operator === OPERATOR.EQUAL) {
+        this.renderTotal(this.calculate(this.firstNumber, this.secondNumber, this.currentOperation));
+      } else {
+        this.currentOperation = operator;
       }
-    })
+    });
 
-    $(SELECTORS.modifier).addEventListener('click', ()=>{
-      this.reset()
-    })
+    $(SELECTORS.modifier).addEventListener('click', () => {
+      this.reset();
+    });
   }
 
   isOverMaxDigitSize(num) {
@@ -61,9 +55,9 @@ class Calculator {
   }
 
   initState() {
-    this.currentOperation = "";
-    this.firstNumber = 0
-    this.secondNumber = 0
+    this.currentOperation = '';
+    this.firstNumber = 0;
+    this.secondNumber = 0;
     this.calculatedResult = INITIAL_NUMBER;
     this.renderTotal(this.calculatedResult);
   }
@@ -73,18 +67,20 @@ class Calculator {
   }
 
   calculate(firstNum, secondNum, operator) {
-    switch(operator){
+    switch (operator) {
       case OPERATOR.ADD:
-        return this.add(firstNum, secondNum)
-      
+        return this.add(firstNum, secondNum);
+
       case OPERATOR.SUBTRACT:
-        return this.minus(firstNum, secondNum)
+        return this.minus(firstNum, secondNum);
 
       case OPERATOR.MULTIPLY:
-        return this.multiply(firstNum, secondNum)
+        return this.multiply(firstNum, secondNum);
 
       case OPERATOR.DIVIDE:
-        return this.divide(firstNum, secondNum)
+        return this.divide(firstNum, secondNum);
+      default:
+        return 0;
     }
   }
 
@@ -112,5 +108,4 @@ class Calculator {
     return Math.floor(firstNum / secondNum);
   }
 }
-
-new Calculator();
+const run = new Calculator();

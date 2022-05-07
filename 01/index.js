@@ -1,15 +1,15 @@
-import { createSpinner, hideSpinner } from "./spinner.js";
+import { createSpinner, hideSpinner } from './spinner.js';
 
 function createLatestNewsElement(article) {
   const { title, link } = article;
 
-  const listItem = document.createElement("li");
-  const anchor = document.createElement("a");
+  const listItem = document.createElement('li');
+  const anchor = document.createElement('a');
 
-  anchor.setAttribute("href", link);
+  anchor.setAttribute('href', link);
   anchor.textContent = title;
 
-  listItem.className = "latest-news-item";
+  listItem.className = 'latest-news-item';
   listItem.append(anchor);
 
   return listItem;
@@ -18,8 +18,8 @@ function createLatestNewsElement(article) {
 function createTopNewsElement(article) {
   const { title, summary, link, thumbnailImage } = article;
 
-  const anchor = document.createElement("a");
-  anchor.setAttribute("href", link);
+  const anchor = document.createElement('a');
+  anchor.setAttribute('href', link);
   anchor.innerHTML = `
     <article class="news">
       <div class="information">
@@ -36,18 +36,16 @@ function createTopNewsElement(article) {
 }
 
 function renderTopNews() {
-  const articleSection = document.getElementById("topNewsList");
+  const articleSection = document.getElementById('topNewsList');
 
   createSpinner(articleSection);
 
   setTimeout(() => {
-    fetch("./data/top.json")
+    fetch('./data/top.json')
       .then((res) => res.json())
       .then((data) => {
         const { articles } = data;
-        const articleList = articles.map((article) =>
-          createTopNewsElement(article)
-        );
+        const articleList = articles.map((article) => createTopNewsElement(article));
 
         articleSection.append(...articleList);
       })
@@ -58,18 +56,16 @@ function renderTopNews() {
 }
 
 function renderLatestNews() {
-  const latestNewsList = document.querySelector(".latest-news-list");
+  const latestNewsList = document.querySelector('.latest-news-list');
 
   createSpinner(latestNewsList);
 
   setTimeout(() => {
-    fetch("./data/latest.json")
+    fetch('./data/latest.json')
       .then((res) => res.json())
       .then((data) => {
         const { articles } = data;
-        const articleList = articles.map((article) =>
-          createLatestNewsElement(article)
-        );
+        const articleList = articles.map((article) => createLatestNewsElement(article));
 
         latestNewsList.append(...articleList);
       })
@@ -79,7 +75,7 @@ function renderLatestNews() {
   }, 1500);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   renderTopNews();
   renderLatestNews();
 });

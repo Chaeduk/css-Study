@@ -1,6 +1,6 @@
-import { SELECTORS, SUBMITTED_CLASS_NAME } from "../constants.js";
-import { querySelector } from "../utils/dom.js";
-import { hideElement, showElement } from "../utils/visibility.js";
+import { SELECTORS, SUBMITTED_CLASS_NAME } from '../constants.js';
+import { querySelector } from '../utils/dom.js';
+import { hideElement, showElement } from '../utils/visibility.js';
 
 class RacingPrepareForm {
   constructor(delegate) {
@@ -15,26 +15,11 @@ class RacingPrepareForm {
 
   bindViews() {
     this.$form = querySelector(SELECTORS.RACING_GAME_PREPARE_FORM);
-    this.$carNamesFieldset = querySelector(
-      SELECTORS.CAR_NAMES_FIELDSET,
-      this.$form
-    );
-    this.$carNamesInput = querySelector(
-      SELECTORS.CAR_NAMES_INPUT,
-      this.$carNamesFieldset
-    );
-    this.$carNamesSubmitButton = querySelector(
-      SELECTORS.CAR_NAMES_SUBMIT_BUTTON,
-      this.$carNamesFieldset
-    );
-    this.$racingCountFieldset = querySelector(
-      SELECTORS.RACING_COUNT_FIELDSET,
-      this.$form
-    );
-    this.$racingCountInput = querySelector(
-      SELECTORS.RACING_COUNT_INPUT,
-      this.$racingCountFieldset
-    );
+    this.$carNamesFieldset = querySelector(SELECTORS.CAR_NAMES_FIELDSET, this.$form);
+    this.$carNamesInput = querySelector(SELECTORS.CAR_NAMES_INPUT, this.$carNamesFieldset);
+    this.$carNamesSubmitButton = querySelector(SELECTORS.CAR_NAMES_SUBMIT_BUTTON, this.$carNamesFieldset);
+    this.$racingCountFieldset = querySelector(SELECTORS.RACING_COUNT_FIELDSET, this.$form);
+    this.$racingCountInput = querySelector(SELECTORS.RACING_COUNT_INPUT, this.$racingCountFieldset);
     this.$racingCountSubmitButton = querySelector(
       SELECTORS.RACING_COUNT_SUBMIT_BUTTON,
       this.$racingCountFieldset
@@ -42,14 +27,8 @@ class RacingPrepareForm {
   }
 
   registerEventListeners() {
-    this.$carNamesSubmitButton.addEventListener(
-      "click",
-      this.delegate.onCarNamesSubmit
-    );
-    this.$racingCountSubmitButton.addEventListener(
-      "click",
-      this.delegate.onRacingCountSubmit
-    );
+    this.$carNamesSubmitButton.addEventListener('click', this.delegate.onCarNamesSubmit);
+    this.$racingCountSubmitButton.addEventListener('click', this.delegate.onRacingCountSubmit);
   }
 
   getCarNames() {
@@ -99,12 +78,12 @@ class RacingPrepareForm {
   }
 
   resetCarNamesInput() {
-    this.$carNamesInput.value = "";
+    this.$carNamesInput.value = '';
     this.removeSubmittedMarkInCarNamesInput();
   }
 
   resetRacingCountInput() {
-    this.$racingCountInput.value = "";
+    this.$racingCountInput.value = '';
     this.removeSubmittedMarkInRacingCountInput();
   }
 

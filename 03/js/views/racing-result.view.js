@@ -1,6 +1,6 @@
-import { SELECTORS } from "../constants.js";
-import { querySelector } from "../utils/dom.js";
-import { hideElement, showElement } from "../utils/visibility.js";
+import { SELECTORS } from '../constants.js';
+import { querySelector } from '../utils/dom.js';
+import { hideElement, showElement } from '../utils/visibility.js';
 
 class RacingResultView {
   constructor(delegate) {
@@ -16,14 +16,11 @@ class RacingResultView {
   bindViews() {
     this.$racingResult = querySelector(SELECTORS.RACING_RESULT);
     this.$winners = querySelector(SELECTORS.WINNERS, this.$racingResult);
-    this.$restartBtn = querySelector(
-      SELECTORS.RESTART_BUTTON,
-      this.$racingResult
-    );
+    this.$restartBtn = querySelector(SELECTORS.RESTART_BUTTON, this.$racingResult);
   }
 
   registerEventListeners() {
-    this.$restartBtn.addEventListener("click", this.delegate.onRestartBtnClick);
+    this.$restartBtn.addEventListener('click', this.delegate.onRestartBtnClick);
   }
 
   renderWinners(winners) {
@@ -48,7 +45,7 @@ class RacingResultView {
 
   reset() {
     this.hide();
-    this.$winners.innerHTML = "";
+    this.$winners.innerHTML = '';
     this.enableRestartBtn();
   }
 }

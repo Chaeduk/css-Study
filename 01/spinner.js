@@ -1,8 +1,8 @@
 export function createSpinner(parent) {
-  const spinnerAreaEl = parent.querySelector(".spinner-area");
-  const imageEl = document.createElement("img");
-  imageEl.alt = "spinner";
-  imageEl.src = "./spinner.gif";
+  const spinnerAreaEl = parent.querySelector('.spinner-area');
+  const imageEl = document.createElement('img');
+  imageEl.alt = 'spinner';
+  imageEl.src = './spinner.gif';
 
   spinnerAreaEl.append(imageEl);
 }
@@ -12,6 +12,6 @@ export function createSpinner(parent) {
 // alt : 대체
 
 export function hideSpinner(parent) {
-  const spinnerArea = parent.querySelector(".spinner-area");
-  spinnerArea.style.display = "none";
+  const spinnerArea = parent.querySelector('.spinner-area');
+  spinnerArea.style.display = 'none';
 }

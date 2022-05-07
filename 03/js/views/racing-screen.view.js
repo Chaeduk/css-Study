@@ -1,10 +1,6 @@
-import { SELECTORS } from "../constants.js";
-import {
-  htmlToElement,
-  querySelector,
-  querySelectorAll,
-} from "../utils/dom.js";
-import { hideElement, showElement } from "../utils/visibility.js";
+import { SELECTORS } from '../constants.js';
+import { htmlToElement, querySelector, querySelectorAll } from '../utils/dom.js';
+import { hideElement, showElement } from '../utils/visibility.js';
 
 class RacingScreen {
   constructor(delegate) {
@@ -63,15 +59,9 @@ class RacingScreen {
 
   renderDistance(i, distance) {
     const $distance = this.$distances[i];
-    const currentDistance = parseInt(
-      $distance.getAttribute("data-current-distance"),
-      10
-    );
-    $distance.insertAdjacentHTML(
-      "beforeend",
-      RacingScreen.forwardIcon.repeat(distance - currentDistance)
-    );
-    $distance.setAttribute("data-current-distance", distance);
+    const currentDistance = parseInt($distance.getAttribute('data-current-distance'), 10);
+    $distance.insertAdjacentHTML('beforeend', RacingScreen.forwardIcon.repeat(distance - currentDistance));
+    $distance.setAttribute('data-current-distance', distance);
   }
 
   insertCarNameInLane($lane, carName) {
@@ -81,12 +71,12 @@ class RacingScreen {
   }
 
   clear() {
-    this.$screen.innerHTML = "";
+    this.$screen.innerHTML = '';
   }
 
   reset() {
     this.hide();
-    this.$screen.innerHTML = "";
+    this.$screen.innerHTML = '';
   }
 }
 
