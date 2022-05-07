@@ -27,7 +27,7 @@ class RacingResultView {
   }
 
   renderWinners(winners) {
-    this.$winners.textContent = winners.join(", ").trim();
+    this.$winners.textContent = winners.join(', ').trim();
   }
 
   show() {

@@ -108,7 +108,7 @@ class RacingPrepareForm {
     this.removeSubmittedMarkInRacingCountInput();
   }
 
-  resetdisableSubmit() {
+  disableSubmit() {
     this.$carNamesInput.disabled = true;
     this.$carNamesSubmitButton.disabled = true;
     this.$racingCountInput.disabled = true;

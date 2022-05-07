@@ -23,7 +23,7 @@ class RacingCarGameController {
 
   bindMethods() {
     this.onCarNamesSubmit = this.onCarNamesSubmit.bind(this);
-    this.onRacingCountSubmit = this.onCarNamesSubmit.bind(this);
+    this.onRacingCountSubmit = this.onRacingCountSubmit.bind(this);
     this.onRestartBtnClick = this.onRestartBtnClick.bind(this);
   }
 
@@ -44,7 +44,7 @@ class RacingCarGameController {
       consoleErrorWithConditionalAlert(e, VALIDATION_ERROR_NAME);
     }
   }
-
+  
   onRacingCountSubmit() {
     const racingCount = this.form.getRacingCount();
     try {
@@ -60,7 +60,7 @@ class RacingCarGameController {
   onRestartBtnClick() {
     this.restartGame();
   }
-
+  
   startGame() {
     this.form.disableSubmit();
     this.screen.show();
@@ -77,7 +77,7 @@ class RacingCarGameController {
     const end = () => {
       this.endGame();
     };
-
+    
     const cars = this.model.getCars();
     const racingCount = this.model.getRacingCount();
     cars.forEach((car, i) => {

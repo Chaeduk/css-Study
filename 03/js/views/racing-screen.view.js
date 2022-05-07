@@ -43,12 +43,12 @@ class RacingScreen {
   }
 
   showSpinner(distanceIndex) {
-    const $spinner = this.$distance[distanceIndex].nextElementSibling;
+    const $spinner = this.$distances[distanceIndex].nextElementSibling;
     showElement($spinner);
   }
 
   hideSpinner(distanceIndex) {
-    const $spinner = this.$distance[distanceIndex].nextElementSibling;
+    const $spinner = this.$distances[distanceIndex].nextElementSibling;
     hideElement($spinner);
   }
 
@@ -62,7 +62,7 @@ class RacingScreen {
   }
 
   renderDistance(i, distance) {
-    const $distance = this.$distance[i];
+    const $distance = this.$distances[i];
     const currentDistance = parseInt(
       $distance.getAttribute("data-current-distance"),
       10
