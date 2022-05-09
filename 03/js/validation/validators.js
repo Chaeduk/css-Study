@@ -11,8 +11,10 @@ const isNumber = (num) => {
 };
 
 export const validateCarNames = (carNames) => {
+  // 자동차 이름 검증
   if (!carNames) {
-    return ValidationResult(true, ERROR_MESSAGES.EMPTY_CAR_NAME);
+    // 자동차 이름이 빈 값이라면
+    return new ValidationResult(true, ERROR_MESSAGES.EMPTY_CAR_NAME);
   }
   const carNameList = carNames.split(',').map((carName) => carName.trim());
   for (let i = 0; i < carNameList.length; i += 1) {
