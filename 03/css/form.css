@@ -35,6 +35,9 @@ fieldset {
 .form-control.submitted {
   background-color: var(--gray-800);
 }
+/*
+form-control와 submitted 클래스를 모두 가지고 있는 엘리먼트에 대해서 css 적용
+*/
 
 .form-control:disabled {
   background-color: var(--gray-800);
