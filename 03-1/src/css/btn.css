@@ -1,0 +1,22 @@
+.btn {
+  width: 85px;
+  padding: 15px 0;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 4px;
+  outline: 0;
+  border-style: none;
+}
+
+.btn-purple {
+  background-color: #8181f7;
+  color: #f2f2f2;
+}
+
+.btn.btn-purple:hover {
+  background-color: #5858fa;
+}
+
+.btn-long {
+  width: 145px;
+}
