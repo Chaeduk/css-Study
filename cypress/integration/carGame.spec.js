@@ -58,7 +58,7 @@ describe('유효한 자동차 이름을 입력한 경우', () => {
     cy.get(testid(TEST_IDS.RACING_COUNT_FIELDSET)).should('be.visible');
   });
 
-  it('자동차 이름에 "<" 혹은 ">" 와 같은 특수문자가 있어도 자동차 이름이 그대로 표시된다', function () {
+  it('자동차 이름에 "<" 혹은 ">" 와 같은 특수문자가 있어도 자동차 이름이 그대로 표시된다', function a() {
     const validCarNames = '<div>,abc,</p>';
     cy.startRacing(validCarNames, DEFAULT_RACING_COUNT);
     cy.get(testid(TEST_IDS.CAR_NAME)).each(($carName, index) => {
@@ -141,17 +141,17 @@ describe('스크린에서 경기가 진행중인 경우', () => {
   });
 
   // 주의: this를 사용하기 위해서는 arrow function을 사용하면 안된다.
-  it('자동차가 달릴 lane이 자동차 갯수만큼 그려진다', function () {
+  it('자동차가 달릴 lane이 자동차 갯수만큼 그려진다', function a() {
     cy.get(testid(TEST_IDS.CAR_LANE)).should('have.length', this.carNameList.length);
   });
 
-  it('자동차 이름을 입력한 순서대로 lane이 그려진다', function () {
+  it('자동차 이름을 입력한 순서대로 lane이 그려진다', function a() {
     cy.get(testid(TEST_IDS.CAR_LANE)).each(($carLane, i) => {
       cy.wrap($carLane).find(testid(TEST_IDS.CAR_NAME)).should('have.text', this.carNameList[i]);
     });
   });
 
-  it('자동차의 이동거리가 화면에 표시되야한다', function () {
+  it('자동차의 이동거리가 화면에 표시되야한다', function a() {
     for (let i = 0; i < DEFAULT_RACING_COUNT; i += 1) {
       cy.tick(CAR_MOVE_DELAY);
       cy.get(testid(TEST_IDS.CAR_LANE)).each(($carLane) => {
@@ -162,7 +162,7 @@ describe('스크린에서 경기가 진행중인 경우', () => {
     }
   });
 
-  it('자동차가 이동하는 사이사이에 스피너가 표시되어야한다', function () {
+  it('자동차가 이동하는 사이사이에 스피너가 표시되어야한다', function a() {
     for (let i = 0; i < DEFAULT_RACING_COUNT; i += 1) {
       cy.tick(500);
       cy.get(testid(TEST_IDS.CAR_LANE)).each(($carLane) => {
@@ -181,7 +181,7 @@ describe('경기가 끝난 경우', () => {
     cy.tick(DEFAULT_RACING_COUNT * 1000); // 10초 기다린다
   });
 
-  it('이동거리가 가장 긴 자동차가 최종 우승자가 된다', function () {
+  it('이동거리가 가장 긴 자동차가 최종 우승자가 된다', function a() {
     const { CAR_LANE, DISTANCE, WINNERS } = TEST_IDS;
     const cars = [];
     cy.get(testid(CAR_LANE))

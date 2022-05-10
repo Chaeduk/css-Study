@@ -55,6 +55,7 @@ class RacingResultView {
   reset() {
     this.hide();
     this.$winners.innerHTML = '';
+    // replaceChildren : 자식 노드를 새로운 노드로 교체
     this.enableRestartBtn();
   }
 }

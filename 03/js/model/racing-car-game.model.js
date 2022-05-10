@@ -4,6 +4,9 @@ import CarModel from './car.model.js';
 import { ERROR_MESSAGES } from '../constants.js';
 
 class RacingCarGameModel {
+  // car가 모듈로써 직접적으로 외부에서 쓰이면 관리하기가 어려워진다.
+  // 그래서 보통 객체나 클래스로 감싸서 그 객체가 스스로 데이터를 자율적으로 관리하도록한다
+  // 그러면 외부에서 데이터를 쓰기 위해 그 데이터를 관리하는 객체를 통해서만 접근 가능하기 때문에 어디서 어떻게 변경되는지 예측하기 쉬워진다
   constructor() {
     this.cars = [];
     this.racingCount = 0;

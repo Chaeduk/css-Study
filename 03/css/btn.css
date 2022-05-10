@@ -11,7 +11,7 @@
   letter-spacing: 1.25px;
 }
 /*
-
+  word-break : 텍스트가 자신의 콘텐츠 박스 밖으로 오버플로 할 때 줄을 바꿀 지 지정
 */
 
 .btn-cyan {
