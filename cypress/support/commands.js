@@ -1,25 +1,17 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import testid from './utils/test-id.js';
+
+Cypress.Commands.add('formSubmit', (inputTestId, buttonTestId, value, handleAlert) => {
+  value !== '' && cy.get(testid(inputTestId)).type(value);
+  cy.get(testid(buttonTestId)).click();
+  if (handleAlert) {
+    cy.on('window:alert', (txt) => {
+      handleAlert(txt);
+    });
+  }
+});
+
+Cypress.Commands.add('startRacing', (validCarNames, validRacingCount) => {
+  cy.formSubmit('car-names-input', 'car-names-submit-button', validCarNames);
+  cy.formSubmit('racing-count-input', 'racing-count-submit-button', validRacingCount);
+  cy.wrap(validCarNames.split(',').map((name) => name.trim())).as('carNameList');
+});
