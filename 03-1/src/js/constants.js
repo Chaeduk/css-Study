@@ -8,6 +8,8 @@ const SELECTORS = {
   RACING_RESULT: '#racing-result',
   WINNERS: '#winners',
   RESTART_BUTTON: '#restart-btn',
+  CAR_NAMES_FORM: '#car-names-form',
+  RACING_COUNT_FORM: '#racing-count-form',
 };
 
 export default SELECTORS;

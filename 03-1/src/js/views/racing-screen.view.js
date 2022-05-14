@@ -1,4 +1,4 @@
-import $ from '../utils/dom.js';
+import { $ } from '../utils/dom.js';
 import SELECTORS from '../constants.js';
 
 class RacingScreenView {
