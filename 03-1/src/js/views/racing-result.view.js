@@ -1,4 +1,5 @@
 import { $ } from '../utils/dom.js';
+import { showElement } from '../utils/visibility.js';
 import SELECTORS from '../constants.js';
 
 class RacingResultView {
@@ -15,6 +16,14 @@ class RacingResultView {
   }
 
   registerEventListeners() {}
+
+  show() {
+    showElement(this.racing_result);
+  }
+
+  renderWinners(winners) {
+    this.winners.textContent = winners.join(', ');
+  }
 }
 
 export default RacingResultView;

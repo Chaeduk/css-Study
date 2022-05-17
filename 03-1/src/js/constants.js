@@ -10,6 +10,10 @@ const SELECTORS = {
   RESTART_BUTTON: '#restart-btn',
   CAR_NAMES_FORM: '#car-names-form',
   RACING_COUNT_FORM: '#racing-count-form',
+  CAR_NAME: '#car-name',
 };
+
+export const RANDOM_RANGE = [0, 9];
+export const MIN_CONDITION_OF_CAR_MOVE = 4;
 
 export default SELECTORS;
