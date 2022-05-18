@@ -1,0 +1,108 @@
+.d-flex {
+  display: flex;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+.aligin-items-start {
+  align-items: flex-start;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-baseline {
+  align-items: baseline;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.align-content-start {
+  align-content: flex-start;
+}
+
+.align-content-end {
+  align-content: flex-end;
+}
+
+.align-content-between {
+  align-content: space-between;
+}
+
+.aligin-content-around {
+  align-content: space-around;
+}
+
+.align-content-evenly {
+  align-content: space-around;
+}
+/*
+justify-content : 주축의 item을 어떻게 배치할지 결정한다
+align-items : 교차축에 대해 item을 어떻게 배치할지 결정 
+align-content : 교차축과 아이템 간 공간이 있으면 공간을 어떻게 분배할지 결정
+*/
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.column-reverse {
+  flex-direction: column-reverse;
+}

@@ -4,11 +4,42 @@
     <meta charset="UTF-8" />
     <title>🎱 행운의 로또</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./src/css/index.css" />
   </head>
 
   <body>
     <div id="app">
-      <h1>🎱 행운의 로또</h1>
+      <h1 class="text-center title">🎱 행운의 로또</h1>
+      <form class="purchase-form">
+        <label for="purchase-input">구입할 금액을 입력해주세요.</label>
+        <div class="purchase-interface">
+          <input class="purchase-input" placeholder="구입 금액" id="purchase-input" />
+          <button class="purchase-button ml-3">구입</button>
+        </div>
+      </form>
+      <div class="purchased-lottery">
+        <p>구매한 로또가 없습니다.</p>
+        <div><p></p></div>
+      </div>
+      <p>지난 주 당첨번호 6개와 보너스 번호 1개를 입력해주세요.</p>
+      <div class="winning-number-input">
+        <div class="winning-number">
+          <p>당첨 번호</p>
+          <div class="numbers">
+            <input class="number mr-2" />
+            <input class="number mr-2" />
+            <input class="number mr-2" />
+            <input class="number mr-2" />
+            <input class="number mr-2" />
+            <input class="number" />
+          </div>
+        </div>
+        <div class="winning-number align-items-end">
+          <p>보너스 번호</p>
+          <input class="number" />
+        </div>
+      </div>
+      <button class="result-btn">결과 확인하기</button>
     </div>
     <script type="module" src="./src/js/index.js"></script>
   </body>
