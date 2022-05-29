@@ -1,0 +1,73 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#switch {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.switch_label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 45px;
+  height: 20px;
+  background-color: #fff;
+  border: 2px solid var(--gray-900);
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+/*
+appearance : 네이티브 요소 디자인 해제/변경
+✨크로스브라우징(=모든 브라우저 동일 화면 구현)에 유용
+- webkit : Safari and Chrome
+- moz : Firefox
+
+transition : css 프로퍼티의 값이 변화할 때, 프로퍼티 값의 변화가 일정 시간에 걸쳐 일어나도록 하는 것이다
+*/
+
+.switch_label:hover {
+  background: #efefef;
+}
+
+.onf_btn {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 20px;
+  background: var(--gray-900);
+  transition: 0.2s;
+}
+
+#switch:checked + .switch_label {
+  background: var(--cyan);
+  border: 2px solid var(--cyan);
+}
+
+#switch:checked + .switch_label:hover {
+  background: var(--cyan);
+}
+
+#switch:checked + .switch_label .onf_btn {
+  left: 25px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #00000020;
+}
+/* A+B : A태그 옆에 B태그를 선택하라는 선택자 */
+
+/*
+태그명1, 태그명2, 태그명3, ...
+: 여러 태그에 같은 스타일을 적용할 경우
+
+태그명1 태그명2 태그명3
+: 태그1, 태그2, 태그3 모두 가지는 클래스에만 스타일 적용할 경우
+*/
