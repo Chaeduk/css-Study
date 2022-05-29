@@ -26,6 +26,10 @@
   cursor: pointer;
 }
 
+.purchase-button:disabled {
+  background-color: var(--gray-900);
+}
+
 .winning-number-input {
   display: flex;
   justify-content: space-between;
