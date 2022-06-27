@@ -33,3 +33,19 @@ height: 100% => parent element 높이의 100%
   display: flex;
   justify-content: space-between;
 }
+
+.lottery-numbers {
+  list-style: none;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.lottery-number {
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.lottery-number > span {
+  font-size: 20px;
+}

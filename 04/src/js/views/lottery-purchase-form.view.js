@@ -14,7 +14,7 @@ class LotteryPurchaseFormView {
   }
 
   addEventListeners() {
-    this.purchase_input.addEventListener('input', () => {});
+    this.purchase_input.addEventListener('input', this.delegate.onChangeInput);
     this.purchase_button.addEventListener('click', this.delegate.onPurchaseLottery);
   }
 }
